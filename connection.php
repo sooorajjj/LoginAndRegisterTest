@@ -1,9 +1,15 @@
 <?php
-$con = mysqli_connect("localhost", "root", "rockdeck", "ProductionManagement");
 
-if ($conn->connect_error) 
+$host = "localhost";
+$user = "root";
+$password = "!nnovations";
+$dbname = "ProductionManagement";
+
+$con = mysqli_connect($host, $user, $password, $dbname);
+
+if (!$con) 
 {
-	die("Connection failed: " . $conn->connect_error);
+	die("Connection failed: " . mysqli_connect_error());
 } 
 else
 {
